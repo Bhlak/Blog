@@ -1,0 +1,329 @@
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  font-family: "Playfair Display", serif;
+  background: rgb(0, 0, 0);
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-size: contain;
+}
+body div {
+  background: rgba(255, 255, 255, 0.069);
+  box-shadow: 0.1px 0.1px 1px lightgrey, -0.1px -0.1px 1px lightgrey;
+  border-radius: 30px;
+  box-sizing: content-box;
+}
+nav {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  margin-top: 0;
+  padding: 5px 0;
+  border: none;
+  box-shadow: 0.1px 0.1px 1px lightgray;
+  position: relative;
+}
+nav span {
+  font-weight: bold;
+  font-size: 2em;
+  background-color: rgb(199, 127, 127);
+  background-image: linear-gradient(
+    to top,
+    rgb(194, 89, 71) 0%,
+    rgb(199, 127, 127) 53%,
+    rgb(173, 20, 20) 100%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  margin-right: 10px;
+  border-radius: 1em;
+  background-color: rgb(194, 89, 71);
+}
+.nav-list {
+  min-width: 50px;
+  text-align: center;
+  padding: 0 3px;
+  padding-top: 10px;
+  transition: background-color 1s;
+  border-radius: 12px;
+}
+.nav-list a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 400ms;
+}
+.nav-list:hover {
+  background-color: coral;
+}
+.nav-list a:hover {
+  color: rgb(243, 215, 57);
+}
+#input_div {
+  width: 450px;
+  height: auto;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+textarea {
+  resize: none;
+  max-width: 95%;
+  font-family: "Playfair Display", serif;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  outline: none;
+  color: inherit;
+}
+.btns {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(194, 89, 71);
+  height: 30px;
+  width: 70px;
+  float: right;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+.btns p {
+  position: relative;
+  z-index: 2;
+  color: whitesmoke;
+}
+.btns:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  transition: all 0.35s;
+}
+.btns:hover:after {
+  background-color: rgb(128, 32, 218);
+  width: 100%;
+}
+.reverse-btn {
+  height: auto;
+  width: auto;
+  padding: 10px 15px;
+}
+#disp {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: none;
+  background-color: transparent;
+  justify-content: center;
+}
+#disp span {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  width: 29%;
+  box-sizing: content-box;
+  margin: 0 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  height: 175px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  overflow: hidden;
+  transition: transform 1s, background-color 1s, z-index 0s;
+}
+#disp span:hover {
+  transform: scale(1.1);
+  background-color: rgba(173, 20, 20, 0.9);
+  z-index: 1;
+}
+footer {
+  box-shadow: 0px 0px 1px lightgray;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  position: static;
+  bottom: 0;
+  padding: 5px 0;
+  color: blanchedalmond;
+}
+@media (max-width: 600px) {
+  nav span {
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+  .nav-list {
+    padding-top: 1.5px;
+  }
+  #input_div {
+    max-width: 300px;
+  }
+  #disp {
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+.shapes {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.34);
+  position: fixed;
+  z-index: -10;
+}
+.star {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  top: 25%;
+  right: 14%;
+  background-color: rgba(173, 20, 20, 0.9);
+}
+.cross {
+  clip-path: polygon(
+    10% 80%,
+    35% 80%,
+    35% 0%,
+    65% 0%,
+    65% 80%,
+    90% 80%,
+    90% 50%,
+    65% 50%,
+    65% 100%,
+    35% 100%,
+    35% 50%,
+    10% 50%
+  );
+  top: 60%;
+  left: 10%;
+  background-color: rgb(194, 89, 71);
+}
+.shapes-nav {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.34);
+  position: absolute;
+  z-index: -10;
+}
+.star-nav {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  top: 25%;
+  background-color: rgba(173, 20, 20, 0.9);
+}
+.cross-nav {
+  clip-path: polygon(
+    10% 80%,
+    35% 80%,
+    35% 0%,
+    65% 0%,
+    65% 80%,
+    90% 80%,
+    90% 50%,
+    65% 50%,
+    65% 100%,
+    35% 100%,
+    35% 50%,
+    10% 50%
+  );
+  top: 32%;
+  background-color: rgb(194, 89, 71);
+}
+#cross1 {
+  left: 5%;
+}
+#star1 {
+  left: 10%;
+}
+#cross2 {
+  left: 14%;
+}
+#star2 {
+  left: 17%;
+}
+#cross3 {
+  left: 23%;
+}
+#star3 {
+  left: 30%;
+}
+#cross4 {
+  left: 36%;
+}
+#star4 {
+  left: 40%;
+}
+#cross5 {
+  left: 43%;
+}
+#star5 {
+  left: 46%;
+}
+#cross6 {
+  right: 5%;
+}
+#star6 {
+  right: 10%;
+}
+#cross7 {
+  right: 14%;
+}
+#star7 {
+  right: 17%;
+}
+#cross8 {
+  right: 23%;
+}
+#star8 {
+  right: 30%;
+}
+#cross9 {
+  right: 36%;
+}
+#star9 {
+  right: 40%;
+}
+#cross10 {
+  right: 43%;
+}
+#star10 {
+  right: 46%;
+}
